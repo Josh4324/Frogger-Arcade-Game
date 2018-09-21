@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Effective JavaScript: Frogger</title>
+    <meta name="description" content="Arcade Game">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" >
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="none">
+    <header>
+      <h1>Frogger Arcade Game</h1>
+    </header>
+    <div class="container">
+      <section class="panel">
+        <span class="heart">
+          <ul>
+            <li><i class="far fa-heart"></i></i></li>
+            <li><i class="far fa-heart"></i></i></li>
+            <li><i class="far fa-heart"></i></i></li>
+          </ul>
+        </span>
+
+        <span id = 'bold'><span>Level:</span> <span class="level">1</span></span>
+
+        <span class="restart">
+          <i class="fa fa-repeat"></i>
+        </span>
+      </section>
+  </div>
+</div>
+
+  <div class="modal">
+    <div class="modal-content">
+      <h2 class="congrat">Frogger Arcade Game</h2>
+      <p>Welcome Great Warrior</p>
+      <p>To rescue your Princess, you have to overcome a lot of bugs</p>
+      <p>All you have to do is pass through them undetected</p>
+      <p>On the way, you will find hearts, taking them will increase your life span by 1</p>
+      <p>If the bugs detect you, your life span will reduce by 1</p>
+      <p>When you life span is exhausted, your journey ends</p>
+      <p>To rescue the princess, you have to pass through 5 levels</p>
+      <p>Your Princess is waiting for you at the 5th level</p>
+      <p>GoodLuck Great Warrior</p>
+      <button class="button">Play</button>
+    </div>
+  </div>
+  <div class="modal2">
+    <div class="modal-content2">
+      <h2 class="congrat2">Congratulations</h2>
+      <p>You have rescued the princess</p>
+      <p>You are truly a great Warrior</p>
+      <p><img src='images\char-boy.png' alt='Warrior' class="lag"><img src='images\char-princess-girl.png' alt='Princess' class='lag'></p>
+      <button class="button2">Play Again</button>
+    </div>
+  </div>
+  <div class="modal3">
+    <div class="modal-content3">
+      <h2 class="congrat3">Unfortunately</h2>
+      <p>You were unable to rescue the princess</p>
+      <p>Do not give up on this great quest</p>
+      <p>A great Warrior does not abandon his quest</p>
+      <button class="button3">Play Again</button>
+    </div>
+  </div>
+  <div class="modal-overlay"></div>
+  <script src="js/app.js"></script>
+  <script src="js/resources.js"></script>
+  <script src="js/engine.js"></script>
+</body>
+</html>
