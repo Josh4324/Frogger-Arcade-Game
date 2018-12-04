@@ -14,7 +14,7 @@ Frogger Arcade Game is a simple game whereby the player has to walk pass moving 
 
 ## Instructions
 
-To use the App, click this link https://josh4324.github.io/Josh-Pixel-Art-Maker/
+To use the App, click this link https://josh4324.github.io/Frogger-Arcade-Game/
 
 ## USAGE
 
