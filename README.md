@@ -2,13 +2,13 @@ Frogger Arcade Game
 ===============================
 
 ## Table of Contents
-* [Intoduction](#imtoduction)
+* [Introduction](#introduction)
 * [Instructions](#instructions)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Licence](#usage)
 
-## Intoduction
+## Introduction
 
 Frogger Arcade Game is a simple game whereby the player has to walk pass moving bugs undectected.
 
@@ -32,11 +32,3 @@ You can contribute to this repository by forking the projects and sending a pull
 ## License
 
 The content of this repository is licensed under a Creative Commons Attribution License
-
-
-
-
-
-
-
-
