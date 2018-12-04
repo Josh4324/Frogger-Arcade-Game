@@ -2,11 +2,11 @@ Frogger Arcade Game
 ===============================
 
 ## Table of Contents
-* Intoduction
+* [Intoduction](#imtoduction)
 * [Instructions](#instructions)
-* Usage
+* [Usage](#usage)
 * [Contributing](#contributing)
-* Licence
+* [Licence](#usage)
 
 ## Intoduction
 
@@ -29,7 +29,7 @@ The Game can also be restated with the restart button.
 
 You can contribute to this repository by forking the projects and sending a pull requests
 
-##License
+## License
 
 The content of this repository is licensed under a Creative Commons Attribution License
 
