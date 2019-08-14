@@ -20,8 +20,8 @@ var button3 = document.getElementsByClassName('button3')[0];
 let a = document.getElementsByTagName('ul');
 // get the element with tagName li and store it in a variable b
 let b = document.getElementsByTagName('li');
-let mySound = new sound("/Frogger-Arcade-Game/music/col.mp3")
-let mySound2 = new sound("Frogger-Arcade-Game/music/game_b.mp3")
+let mySound = new sound("https://josh4324.github.io/Frogger-Arcade-Game/music/col.mp3")
+let mySound2 = new sound("https://josh4324.github.io/Frogger-Arcade-Game/music/game_b.mp3")
 
 //this function adds the remove-modal class
 //removes the none class and the modal-overlay class
