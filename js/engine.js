@@ -24,6 +24,7 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
+    canvas.className = "can"
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -81,7 +82,7 @@ var Engine = (function(global) {
         updateEntities(dt);
         checkCollisions();
         win_c();
-
+        
     }
 
     /* This is called by the update function and loops through all of the
@@ -92,12 +93,14 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
+        
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
         allheart.forEach(function(heart) {
             heart.update(dt);
         });
+
         player.update();
     }
 

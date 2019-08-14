@@ -1,48 +1,82 @@
 body {
     text-align: center;
-    background: blue;
+    background-image:url(../images/art.jpg)
+}
+
+
+.head{
+  display: inline-block;
+}
+
+.div{
+  display: inline-block;
+  float:right;
+  margin-top:100px;
+  margin-right:100px;
 }
 
 h1 {
   margin-top: 0px;
   margin-bottom: 0px;
+  display:inline-block;
+  padding-bottom: 50px;
   text-align: center;
+  padding-left:50px;
+  font-family: 'Monoton', cursive;
+  color:white;
 }
 
-section.panel {
-  padding-left: 300px;
-  padding-right: 300px;
-  height: 50px;
+.can{
+ 
 }
 
-.panel .heart {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-shadow: 1px 1px 1px black;
+.container{
+  display: block;
+  font-family: 'Faster One', cursive;
+  
+}
+
+.heart {
     color:red;
-    padding-right: 100px;
+    display: block;
+    padding-bottom: 50px;
 }
 
-.panel .heart li {
+.heart ul{
+  margin:0;
+  padding: 0;
+  width:100px;
+  display:inline-block;
+}
+
+.heart li {
     list-style: none;
     display: inline-block;
 }
 
-.panel .restart {
+.restart {
     cursor: pointer;
-    padding-left:40px;
+    padding:0;
+    margin:0;
+    border:0;
 }
 
+.lives{
+  width:20px;
+}
+
+
+.res{
+  width:100px;
+}
+.res1{
+  width:70px;
+  height: 40px;
+}
 #bold {
   font-weight: bold;
-  font-size: 20px;
+  font-size:40px;
   padding-right: 100px;
-}
-
-.container {
-  margin-top: 10px;
-  height: 50px
 }
 
 .none {
@@ -71,15 +105,17 @@ section.panel {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 30rem;
-  height:28rem;
+  background:linear-gradient(#e55d87,#5fc3e4);
+  width: 40rem;
+  height:35rem;
   border-radius: 0.5rem;
+  font-family: 'Poor Story', cursive;
+  font-size:18px;
 }
 
 h2.congrat {
   text-align: center;
+  font-family: 'Monoton', cursive;
 }
 
 .button {
@@ -89,7 +125,6 @@ h2.congrat {
   background-color: blue;
   border-color: #42e8f4;
   border-radius: 1em;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -137,8 +172,9 @@ h2.congrat {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
+  background:linear-gradient(#e55d87,#5fc3e4);
+  font-family: 'Poor Story', cursive;
+  padding: 1rem;
   width: 30rem;
   height:28rem;
   border-radius: 0.5rem;
@@ -146,6 +182,7 @@ h2.congrat {
 
 h2.congrat2 {
   text-align: center;
+  font-family: 'Monoton', cursive;
 }
 
 .button2 {
@@ -155,7 +192,6 @@ h2.congrat2 {
   background-color: blue;
   border-color: #42e8f4;
   border-radius: 1em;
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -167,7 +203,7 @@ h2.congrat2 {
 }
 
 img.lag {
-  padding-top: 100px;
+  padding-top: 50px;
   width:150px;
   height:150px;
 }
@@ -197,7 +233,9 @@ img.lag {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background:linear-gradient(#e55d87,#5fc3e4);
+  font-family: 'Poor Story', cursive;
+  font-size:20px;
   padding: 1rem 1.5rem;
   width: 30rem;
   height:28rem;
@@ -206,6 +244,7 @@ img.lag {
 
 h2.congrat3 {
   text-align: center;
+  font-family: 'Monoton', cursive;
 }
 
 .button3 {
@@ -215,8 +254,8 @@ h2.congrat3 {
   background-color: blue;
   border-color: #42e8f4;
   border-radius: 1em;
-  padding: 10px;
   cursor: pointer;
+
 }
 
 .show-modal2 {

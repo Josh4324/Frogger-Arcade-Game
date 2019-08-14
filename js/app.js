@@ -20,7 +20,8 @@ var button3 = document.getElementsByClassName('button3')[0];
 let a = document.getElementsByTagName('ul');
 // get the element with tagName li and store it in a variable b
 let b = document.getElementsByTagName('li');
-
+let mySound = new sound("../music/col.mp3")
+let mySound2 = new sound("../music/game_b.mp3")
 
 //this function adds the remove-modal class
 //removes the none class and the modal-overlay class
@@ -28,6 +29,7 @@ function modals(){
   modal.classList.add("remove-modal");
   none.classList.remove("none");
   overlay.classList.remove("modal-overlay")
+  mySound2.play()
 };
 
 //this function removes the show-modal class and the none class
@@ -56,17 +58,19 @@ function Restart(){
   allheart = [heart1,heart2,heart3]
   document.getElementsByClassName('level')[0].textContent = player.level;
   a[0].innerHTML = ''
-  a[0].innerHTML = a[0].innerHTML + '<li><i class="far fa-heart"></i></i></li> <li><i class="far fa-heart"></i></i></li> <li><i class="far fa-heart"></i></i></li> ';
-  Enemy1.speed = 50;
-  Enemy2.speed = 100;
-  Enemy3.speed = 150;
-  Enemy4.speed = 150;
-  Enemy5.speed = 150;
-  Enemy6.speed = 250;
-  Enemy7.speed = 250;
-  Enemy8.speed = 200;
-  Enemy9.speed = 350;
+  a[0].innerHTML = a[0].innerHTML + '<li><img class="lives" src="images/Heart.png" alt=""></li> <li><img class="lives" src="images/Heart.png" alt=""></li> <li><img class="lives" src="images/Heart.png" alt=""></li> ';
+  Enemy1.speed = 100;
+  Enemy2.speed = 150;
+  Enemy3.speed = 100;
+  Enemy4.speed = 200;
+  Enemy5.speed = 250;
+  Enemy6.speed = 100;
+  Enemy7.speed = 300;
+  Enemy8.speed = 400;
+  Enemy9.speed = 300;
 };
+
+
 
 //Event Listeners
 
@@ -102,7 +106,7 @@ var Enemy = function(x,y,speed) {
 Enemy.prototype.update = function(dt) {
   this.x = this.x + (dt * this.speed)
   if (this.x > 600){
-    this.x = 0;
+    this.x = -500;
   }
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
@@ -130,6 +134,7 @@ var Player = function(){
 // a render() method
 Player.prototype.render = function() {
   ctx.drawImage(Resources.get(this.hero), this.x, this.y);
+ 
 };
 
 // an update method
@@ -139,7 +144,7 @@ Player.prototype.update = function(dt){
     if ((this.y === allheart[i].y) && (this.x >= allheart[i].x - 50 && this.x <= allheart[i].x + 74)){
       allheart.splice(i,1);
       this.live = this.live + 1;
-      a[0].innerHTML = a[0].innerHTML + '<li><i class="far fa-heart"></i></li> ';
+      a[0].innerHTML = a[0].innerHTML + '<li><img class="lives" src="images/Heart.png" alt=""></li>';
     }
   }
 
@@ -163,7 +168,7 @@ Player.prototype.update = function(dt){
     alert(`Welcome to Level ${this.level}`)
     document.getElementsByClassName('level')[0].textContent = this.level;
     for (var i = 0; i < allEnemies.length; i++){
-      allEnemies[i].speed = allEnemies[i].speed + 50;
+      allEnemies[i].speed = allEnemies[i].speed + 100;
     }
   };
 
@@ -171,7 +176,7 @@ Player.prototype.update = function(dt){
   if (this.level === 6){
     none.classList.add("none");
     modal2.classList.add("show-modal");
-
+    
   };
 
 };
@@ -212,28 +217,28 @@ Heart.prototype.render = function() {
 // Heart update method
 Heart.prototype.update = function(dt) {
   this.x = this.x + (dt * this.speed)
-  if (this.x > 1000){
-    this.x = 0;
+  if (this.x > 10000){
+    this.x = -20,000;
   }
 };
 
 
 // Now instantiate your objects.
 var Enemy1,Enemy2,Enemy3,Enemy4,Enemy5,Enemy6,Enemy7,Enemy8,Enemy9;
-Enemy1 = new Enemy(0,60,50);
-Enemy2 = new Enemy(0,220,100);
-Enemy3 = new Enemy(0,140,150);
-Enemy4 = new Enemy(-300,60,150);
-Enemy5 = new Enemy(-300,220,150);
-Enemy6 = new Enemy(-300,140,250);
-Enemy7 = new Enemy(-600,60,250);
-Enemy8 = new Enemy(-600,220,200);
-Enemy9 = new Enemy(-600,140,350);
+Enemy1 = new Enemy(0,60,100);
+Enemy2 = new Enemy(-100,220,150);
+Enemy3 = new Enemy(-150,140,100);
+Enemy4 = new Enemy(-300,60,200);
+Enemy5 = new Enemy(-350,220,250);
+Enemy6 = new Enemy(-400,140,100);
+Enemy7 = new Enemy(-600,60,300);
+Enemy8 = new Enemy(-650,220,400);
+Enemy9 = new Enemy(-700,140,300);
 
 //Gem objects
-heart1 = new Heart('images/Heart.png',-600,60,200);
-heart2 = new Heart('images/Heart.png',-1000,220,100);
-heart3 = new Heart('images/Heart.png',330,140,500);
+heart1 = new Heart('images/Heart.png',-10000,60,100);
+heart2 = new Heart('images/Heart.png',-5000,220,250);
+heart3 = new Heart('images/Heart.png',-20000,140,400);
 
 
 // Place all enemy objects in an array called allEnemies
@@ -263,6 +268,7 @@ var checkCollisions = function(){
     if ((player.y === allEnemies[i].y) && (player.x >= allEnemies[i].x - 50 && player.x <= allEnemies[i].x + 74)){
       player.x = 200;
       player.y = 380;
+      mySound.play()
     }
   }
 };
@@ -274,3 +280,20 @@ var win_c = function(){
     player.y = 380;
   }
 };
+
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
+
